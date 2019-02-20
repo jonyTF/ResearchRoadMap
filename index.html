@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Research Road Map</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            .pixelated {
+                image-rendering: pixelated;
+            }
+        </style>
+    </head>
+    <body>
+        <img id="main_img" class="pixelated" src="img/pirate/walk1.png" width="128" height="256">
+        
+        <script>
+            var cur_img = 1;
+
+            function nextImg() {
+                if (cur_img < 8) {
+                    cur_img++;
+                } else {
+                    cur_img = 1;
+                }
+                document.getElementById('main_img').src = `img/pirate/walk${cur_img}.png`;
+            }
+
+            var intervalID = window.setInterval(nextImg, 150);
+        </script>
+    </body>
+</html>
